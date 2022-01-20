@@ -1,9 +1,10 @@
-import './stylesheets/App.css';
+// import './stylesheets/App.css';
+import Cars from "./components/Cars";
 
 function App() {
   return (
     <div className="App">
-      <h1>React is working</h1>
+      <Cars/>
     </div>
   );
 }
