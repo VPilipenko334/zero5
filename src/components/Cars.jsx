@@ -1,41 +1,26 @@
 import React, {useState, useEffect} from 'react'; 
 import { csv } from 'd3';
-import Papa from 'papaparse'
 
 const Cars = () => {
 
     // const [rows, setRows] = useState('')
+    const [data, setData] = useState();
 
-        // useEffect(() => {
-        //     async function getData() {
-        //         const response = await fetch('data.csv')
-        //         const reader = response.body.getReader()
-        //         const result = await reader.read() // raw array
-        //         const decoder = new TextDecoder('utf-8')
-        //         const csv = decoder.decode(result.value) // the csv text
-        //         const results = Papa.parse(csv, { header: true }) // object with { data, errors, meta }
-        //         const rows = results.data // array of objects
-        //         setRows(console.log(rows))
-        //     }
-        //     getData()
-        // }, []) // [] means just do this once, after initial render
-    
-
-    const [car, setCar] = useState('')
-
+    //runs once
     useEffect(() => {
-        csv('./data.csv')
-        // .then(response => response.json())
+        csv('data.csv')
         .then(data=> { // returns a promise
-            setCar(data)
             console.log(data)
+            setData(data)
         })
     }, [])
 
-    
     return (
         <div className="cars-wrapper">
-            {/* {car} */}
+            <h1>Cars will be shown here</h1>
+                {data.map(car => <h3>
+                    <p>License Plate</p>
+                    {car.license_plate_number}</h3>) }
         </div>
     )
 }

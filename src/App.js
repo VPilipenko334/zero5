@@ -1,5 +1,6 @@
 // import './stylesheets/App.css';
 import Cars from "./components/Cars";
+import './stylesheets/Cars.css'
 
 function App() {
   return (
