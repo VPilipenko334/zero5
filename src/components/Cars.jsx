@@ -24,7 +24,9 @@ const Cars = () => {
     const [car, setCar] = useState('')
 
     useEffect(() => {
-        csv('data.csv').then(data=> { // returns a promise
+        csv('./data.csv')
+        // .then(response => response.json())
+        .then(data=> { // returns a promise
             setCar(data)
             console.log(data)
         })
@@ -33,7 +35,7 @@ const Cars = () => {
     
     return (
         <div className="cars-wrapper">
-            {/* {rows} */}
+            {/* {car} */}
         </div>
     )
 }

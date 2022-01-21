@@ -8,6 +8,7 @@
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
+    "csv-parser": "^3.0.0",
     "d3": "^7.3.0",
     "fast-csv": "^4.3.6",
     "papaparse": "^5.3.1",
